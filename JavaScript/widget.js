@@ -92,16 +92,39 @@
     }
     @media (max-width: 500px) {
         .mazvi-widget-iframe-wrap {
-            width: 98vw;
-            height: 90vh;
-            /* right/bottom diatur inline */
+            width: 100% !important;
+            height: 100% !important;
+            max-height: 100% !important;
+            max-width: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            border-radius: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .mazvi-widget-iframe-wrap iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         .mazvi-widget-iframe-close-outer {
-            top: -12px;
-            right: -12px;
-            width: 32px;
-            height: 32px;
-            font-size: 1.2em;
+            top: 50px !important;
+            right: 20px !important;
+            left: auto !important;
+            width: 40px;
+            height: 40px;
+            font-size: 1.4em;
+            z-index: 1000001;
+        }
+        .mazvi-widget-btn {
+            max-width: calc(100vw - 32px);
+            /* Position is now controlled by the inline styles just like on desktop */
         }
     }
     `;
